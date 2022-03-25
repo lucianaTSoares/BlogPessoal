@@ -1,0 +1,16 @@
+.bi {
+    font-size: 2em;
+    transition: .5s;
+}
+
+.bi-github:hover {
+    color: #8295a5;
+}
+
+.bi-linkedin:hover {
+    color: #0087d0;
+}
+
+.bi-envelope-fill:hover {
+    color: #b55353;
+}
