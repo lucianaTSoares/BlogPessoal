@@ -7,13 +7,13 @@
                         <h1 class="text-center mb-5 w-100">Faça seu Login</h1>
                         <div class="form-group">
                             <label for="inputEmail" class="mb-0">E-mail:</label>
-                            <input type="email" class="form-control" id="inputEmail">
+                            <input [(ngModel)]='usuarioLogin.usuario' type="email" name="email" class="form-control" id="inputEmail">
 
                             <label for="inputSenha" class="mt-2 mb-0">Senha:</label>
-                            <input type="password" class="form-control" id="inputSenha">
+                            <input [(ngModel)]='usuarioLogin.senha' type="password" name="senha" class="form-control" id="inputSenha">
                             
                             <div class="d-flex justify-content-center">
-                                <button class="btn btn-success w-100 mt-5">Entrar</button>
+                                <button (click)='logar()' class="btn btn-success w-100 mt-5">Entrar</button>
                             </div>
 
                             <p class="text-center mt-5">Não possui uma conta? <a routerLink="/cadastro">Cadastre-se</a>.</p>
