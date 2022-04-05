@@ -1,0 +1,20 @@
+.div-button {
+    column-gap: 11px;
+}
+
+.container-fluid {
+    background-color: #73357d;
+}
+
+.nav-link.active {
+    background-color: #c598cf;
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.bg-roxo {
+    background-color: #c598cf;
+}

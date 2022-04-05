@@ -14,3 +14,11 @@
 .bi-envelope-fill:hover {
     color: #b55353;
 }
+
+.bg-roxo {
+    background-color: #50125a;
+}
+
+.bg-roxo-claro {
+    background-color: #73357d; 
+}

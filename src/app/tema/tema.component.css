@@ -1,0 +1,15 @@
+.container-fluid {
+    background-color: #73357d;
+}
+
+.gap {
+    column-gap: 7px;
+}
+
+.table td, .table th{
+    border-color: #aa84af;
+}
+
+.table thead {
+    background-color: #aa84af;
+}
