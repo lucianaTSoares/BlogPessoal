@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-center py-4">
+    <div class="form-group">
+        <form class="d-flex align-items-end">
+            <div>
+                <label for="tema">Edite a descrição do tema:</label>
+                <input [(ngModel)]="tema.descricao" class="form-control" id="tema" type="text" name="tema">
+            </div>
+            <button (click)='editarTema()' class="btn btn-success ml-2">Editar</button>
+            <button routerLink="/tema" class="btn btn-secondary ml-2">Cancelar</button>
+        </form>
+    </div>
+</div>

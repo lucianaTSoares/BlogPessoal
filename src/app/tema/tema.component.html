@@ -5,8 +5,8 @@
             <h3 class="text-light">Cadastre aqui os temas!</h3>
             <div class="form-group mt-1">
                 <form class="d-flex gap">
-                    <input class="form-control" type="text" name="tema" id="inputTema" placeholder="Ex: Jogos">
-                    <button class="btn btn-success" type="submit">Cadastrar</button>
+                    <input [(ngModel)]="tema.descricao" class="form-control" type="text" name="tema" id="inputTema" placeholder="Ex: Jogos">
+                    <button (click)="cadastrarTema()" class="btn btn-success" type="submit">Cadastrar</button>
                 </form>
             </div>
         </div>
@@ -14,34 +14,24 @@
 </div>
 <div class="row">
     <div class="container py-5">
-        <div class="col-md-12">
+        <div class="col-md-12 d-flex flex-column align-items-center">
             <h3 class="text-center mb-4">Todos os temas</h3>
-            <table class="table table-hover">
+            <table class="table table-hover w-75">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tema</th>
+                        <th scope="col">Funções</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                    <tr *ngFor="let tema of listaTema">
+                        <th>{{tema.id}}</th>
+                        <td>{{tema.descricao}}</td>
+                        <td class="d-flex justify-content-around">
+                            <button class="btn btn-info" [routerLink]="['/tema-edit', tema.id]">Editar</button>
+                            <button class="btn btn-danger" [routerLink]="['/tema-delete', tema.id]">Excluir</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
