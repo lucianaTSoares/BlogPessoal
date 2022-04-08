@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
 import { TemaService } from 'src/app/service/tema.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-tema-delete',
@@ -20,6 +21,11 @@ export class TemaDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if (environment.token == '') {
+      alert('Sua sessão expirou, faça o login novamente.')
+      this.router.navigate(['/login'])
+    }
 
     this.idTema = this.route.snapshot.params['id']
     this.buscarIdTema(this.idTema)
